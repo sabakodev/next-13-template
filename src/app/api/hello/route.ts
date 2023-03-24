@@ -1,31 +1,39 @@
+import EromangaImage from '../../../../public/img/Eromanga.png'
+import KurisuImage from '../../../../public/img/Kurisu.jpg'
+import OkabeKurisuImage from '../../../../public/img/Okabe-Kurisu.jpg'
+import SailorMoonImage from '../../../../public/img/Sailor-Moon.jpg'
+import HishiroImage from '../../../../public/img/Hishiro.png'
+import MoeImage from '../../../../public/img/Moe.png'
+import RuiImage from '../../../../public/img/Rui.jpg'
+
 export async function GET(request: Request) {
 	const animelist = [
 		{
-			src: 'http://localhost:8080/assets/img/Eromanga.png',
+			src: EromangaImage,
 			alt: 'Sagiri'
 		},
 		{
-			src: 'http://localhost:8080/assets/img/Kurisu.jpg',
+			src: KurisuImage,
 			alt: 'Kurisu'
 		},
 		{
-			src: 'http://localhost:8080/assets/img/Okabe-Kurisu.jpg',
+			src: OkabeKurisuImage,
 			alt: 'Okabe & Kurisu'
 		},
 		{
-			src: 'http://localhost:8080/assets/img/Sailor-Moon.jg',
+			src: SailorMoonImage,
 			alt: 'Usagi'
 		},
 		{
-			src: 'http://localhost:8080/assets/img/Hishiro.png',
+			src: HishiroImage,
 			alt: 'Hishiro'
 		},
 		{
-			src: 'http://localhost:8080/assets/img/Moe.png',
+			src: MoeImage,
 			alt: 'Loli'
 		},
 		{
-			src: 'http://localhost:8080/assets/img/Rui.jpg',
+			src: RuiImage,
 			alt: 'Rui'
 		},
 
