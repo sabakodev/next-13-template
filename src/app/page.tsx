@@ -40,13 +40,13 @@ export default async function Home() {
 		<main>
 			<div className="mx-auto max-w-7xl px-6 lg:px-8 relative">
 				<HomeHero />
-				<div className="-mt-16 relative z-10 content-bg mx-auto max-w-2xl sm:text-center py-4 px-6 rounded-lg">
+				<div className="-mt-16 relative z-10 content-bg mx-auto max-w-2xl sm:text-center py-8 px-6 rounded-lg">
 					<h2 className="text-3xl font-bold tracking-tight dark:text-gray-100 text-gray-900 sm:text-4xl">Home sweet localhost</h2>
 					<p className="mt-8 text-lg leading-8 dark:text-gray-400 text-gray-600">
 						This is Fray local mainframe, you would not access this page unless you needed to. If you believe accessing this page through illegal acces, please <b>disconnect now</b>.
 					</p>
 				</div>
-				<div className="py-24 sm:py-32">
+				<div className="pb-24 sm:pb-32 pt-12 sm:pt-16">
 					<div className="mx-auto max-w-2xl lg:text-center">
 						<h2 className="text-base font-semibold leading-7 dark:text-lime-600 text-rose-600">Deploy faster</h2>
 						<p className="mt-2 text-3xl font-bold tracking-tight dark:text-gray-100 text-gray-900 sm:text-4xl">
