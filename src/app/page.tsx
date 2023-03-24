@@ -1,12 +1,9 @@
-'use client'
-
 import Image from 'next/image'
 import Link from 'next/link'
 
 // import styles from './page.module.css'
 
 import { CheckIcon } from '@heroicons/react/20/solid'
-import { useState } from 'react'
 
 const includedFeatures = [
 	'Private forum access',
@@ -15,46 +12,25 @@ const includedFeatures = [
 	'Official member t-shirt',
 ]
 
-const animelist = [
-	{
-		src: 'http://localhost:8080/assets/img/Eromanga.png',
-		alt: 'Sagiri'
-	},
-	{
-		src: 'http://localhost:8080/assets/img/Kurisu.jpg',
-		alt: 'Kurisu'
-	},
-	{
-		src: 'http://localhost:8080/assets/img/Okabe-Kurisu.jpg',
-		alt: 'Okabe & Kurisu'
-	},
-	{
-		src: 'http://localhost:8080/assets/img/Sailor-Moon.jg',
-		alt: 'Usagi'
-	},
-	{
-		src: 'http://localhost:8080/assets/img/Hishiro.png',
-		alt: 'Hishiro'
-	},
-	{
-		src: 'http://localhost:8080/assets/img/Moe.png',
-		alt: 'Loli'
-	},
-	{
-		src: 'http://localhost:8080/assets/img/Rui.jpg',
-		alt: 'Rui'
-	},
+async function getAnimeData() {
+	const res = await fetch('http://localhost:3000/api/hello')
 
-]
+	if (!res.ok) {
+		// This will activate the closest `error.js` Error Boundary
+		throw new Error('Failed to fetch data')
+	}
 
-export default function Home() {
-	const [anime, setAnime] = useState(animelist[0])
+	return res.json()
+}
+
+export default async function Home() {
+	const randomAnime = await getAnimeData()
 
 	return (
 		<main>
 			<div className="pb-24 sm:pb-32">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8 relative">
-					<Image className="mx-auto relative z-0 h-96 object-cover" alt={anime.alt} src={anime.src} width={850} height={300} />
+					<Image className="mx-auto relative z-0 h-96 object-cover" alt={randomAnime.alt} src={randomAnime.src} width={850} height={300} />
 					<div className="-mt-16 relative z-10 content-bg mx-auto max-w-2xl sm:text-center py-4 px-6 rounded-lg">
 						<h2 className="text-3xl font-bold tracking-tight text-gray-100 sm:text-4xl">Home sweet localhost</h2>
 						<p className="mt-8 text-lg leading-8 text-gray-400">
