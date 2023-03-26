@@ -1,6 +1,6 @@
 import Link from "next/link"
 
-export default function ActionCard({ title, description, action, docs }) {
+export default function ActionCard({ title, description, action, docs, img }) {
 	return (
 		<div className="mx-auto max-w-7xl py-12 sm:px-6 sm:py-16 lg:px-8">
 			<div className="relative isolate overflow-hidden bg-gray-900 px-6 pt-16 shadow-2xl sm:rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0">
@@ -37,8 +37,8 @@ export default function ActionCard({ title, description, action, docs }) {
 				<div className="relative mt-16 h-80 lg:mt-8">
 					<img
 						className="absolute top-0 left-0 w-[57rem] max-w-none rounded-md bg-white/5 ring-1 ring-white/10"
-						src="https://tailwindui.com/img/component-images/dark-project-app-screenshot.png"
-						alt="App screenshot"
+						src={img}
+						alt={title}
 						width={1824}
 						height={1080}
 					/>
