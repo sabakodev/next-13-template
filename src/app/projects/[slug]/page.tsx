@@ -21,7 +21,11 @@ function classNames(...classes: string[]) {
 	return classes.filter(Boolean).join(' ')
 }
 
-export default function ProjectItem({ params }) {
+export default function ProjectItem({
+	params,
+}: {
+	params: { slug: string }
+}) {
 	return (
 		<main>
 			<div className="py-24 sm:py-32">
